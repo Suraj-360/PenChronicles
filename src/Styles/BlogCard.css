@@ -1,0 +1,148 @@
+/* Blog Card container */
+.post-article-card-container {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    transition: transform 0.3s ease-in-out;
+    padding: 0.1rem 0.1rem 0.5rem 0.1rem;
+    cursor: pointer;
+}
+
+.post-article-card-container:hover {
+    transform: scale(1.005);
+}
+
+.post-article-card-container-icon-container{
+    width: 100%;
+    height: 25px;
+}
+.post-article-card-pin-unpin-icon-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.post-article-card-pin-unpin-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+/* Responsive Font Scaling */
+:root {
+    --font-base: 16px;
+    /* Default font size for desktop */
+}
+
+html {
+    font-size: var(--font-base);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    :root {
+        --font-base: 14px;
+        /* Smaller font for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --font-base: 12px;
+        /* Even smaller font for mobile */
+    }
+}
+
+.blog-author-and-timestamp{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #007BFF;
+    font-weight: 500;
+}
+
+.blog-author-and-timestamp .blog-author-username{
+    cursor: pointer;
+}
+
+.blog-author-and-timestamp .blog-author-username:hover{
+    text-decoration: underline;
+}
+
+/* Blog card text styling */
+.post-article-post-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.post-article-post-title:hover{
+    text-decoration: underline;
+}
+
+.post-article-date-time-only {
+    width: 100%;
+    color: #007BFF;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.post-article-description {
+    font-size: 0.95rem;
+    /* Scales with font base */
+    line-height: 1.5;
+    color: #667085;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-align: justify;
+}
+
+/* Blog image */
+.post-article-card-container img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    /* Ensures consistent ratio */
+    object-fit: cover;
+}
+
+/* Tags */
+.post-article-tags-container {
+    display: flex;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+}
+
+.post-article-tags-container .post-article-post-tag {
+    font-size: 0.85rem;
+    border-radius: 0.5rem;
+    padding: 5px 10px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.post-article-tags-container .post-article-post-tag:hover {
+    text-decoration: underline;
+    background-color: #fff !important;
+    color: #000000 !important;
+}
+
+/* Dark mode support */
+body.dark-mode .post-article-card-container {
+    box-shadow: rgba(149, 157, 165, 0.2) 5px 5px 10px;
+}

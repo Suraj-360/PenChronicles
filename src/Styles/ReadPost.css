@@ -1,0 +1,455 @@
+.read-post-main-container {
+    max-width: 1400px;
+    margin: 0.5% auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1%;
+}
+
+.read-post-main-container .comment-box-panel {
+    position: fixed;
+    display: none;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 370px;
+    height: 100vh;
+    background-color: #f0f0f0;
+    z-index: 999;
+    overflow-y: auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: right 0.5s ease-in-out;
+}
+
+.read-post-main-container .comment-box-panel .horizontal-ruler {
+    width: 100%;
+    height: 0.03rem;
+    background-color: #b1b1b1;
+    margin: 0.7rem 0rem;
+}
+
+.read-post-main-container .comment-box-panel .comment-box-panel-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.read-post-main-container .comment-box-panel .comment-box-panel-header h2 {
+    color: #6941C6;
+}
+
+.read-post-main-container .comment-box-panel .close-comment-box-panel {
+    width: 25px;
+    height: auto;
+    cursor: pointer;
+}
+
+.read-post-main-container .comment-box-panel .comment-box-form-container .comment-box-input-group {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    position: relative;
+    padding-right: 25%;
+}
+
+.read-post-main-container .comment-box-panel .comment-box-form-container .comment-box-input-group .comment-box-respond-button {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 5%;
+    background-color: #6941C6;
+    padding: 5px 12px;
+    font-size: 14px;
+    border-radius: 1rem;
+    color: #ffffff;
+}
+
+.read-post-main-container .comment-box-panel .comment-box-form-container .comment-box-input-group .form-input-comment-box {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 1.2rem;
+    font-size: 14px;
+    color: #6B6B6B;
+    background-color: transparent;
+    transition: border-color 0.3s ease;
+}
+
+.responses-main-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    overflow-y: scroll;
+}
+
+.responses-main-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.responses-main-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #e60051, #888);
+    border-radius: 2px;
+    border: 2px solid #f4f4f4;
+}
+
+.responses-main-container::-webkit-scrollbar-track {
+    background: #fcd3d3;
+    border-radius: 2px;
+    margin: 4px 0;
+}
+
+/* Post Content Styling */
+.read-post-main-container .post-main-container {
+    width: 55%;
+    margin: 3% auto;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+}
+
+.read-post-main-container .post-main-container .about-author-main-container {
+    position: relative;
+    padding: 1rem 1rem 1rem 4.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.read-post-main-container .post-main-container .about-author-main-container img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 2.5rem;
+    left: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #b0b0b0;
+}
+
+.read-post-main-container .post-main-container .about-author-main-container .author {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.read-post-main-container .post-main-container .about-author-main-container .author .author-name {
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 1ms;
+}
+
+.read-post-main-container .post-main-container .about-author-main-container .author .author-name:hover {
+    text-decoration: underline;
+}
+
+.read-post-main-container .post-main-container .about-author-main-container .author .follow-following-author {
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.read-post-main-container .post-main-container .about-author-main-container .author .follow-following-author.follow-author-button {
+    color:#019000
+}
+
+.read-post-main-container .post-main-container .about-author-main-container .author .follow-following-author.following-author-button {
+    color: rgb(71, 82, 245);
+}
+
+.read-post-main-container .post-main-container .about-author-main-container .author .follow-following-author.follow-author-button:hover {
+    color:#00b100;
+}
+
+.read-post-main-container .post-main-container .about-author-main-container .author .follow-following-author.following-author-button:hover {
+    color: rgb(62, 75, 253);
+}
+
+.read-post-main-container .post-main-container .about-author-main-container .followers-count-and-post-timestamp {
+    display: flex;
+    gap: 0.9rem;
+}
+
+.wrapper-read-time-and-last-update{
+    display: flex;
+    gap: 0.6rem;
+}
+
+.read-post-main-container .post-main-container .about-author-main-container .followers-count-and-post-timestamp .read-time,
+.read-post-main-container .post-main-container .about-author-main-container .followers-count-and-post-timestamp .last-update {
+    color: #6B6B6B;
+    font-size: 0.90rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.1rem;
+}
+
+.read-post-main-container .post-main-container .about-author-main-container .followers-count-and-post-timestamp .followers-count {
+    color: #6941C6;
+    font-weight: 400;
+}
+
+/* Horizontal rule Style */
+.read-post-main-container .post-main-container .horizontal-ruler {
+    width: 100%;
+    height: 0.03rem;
+    background-color: #b1b1b1;
+    margin: 0.7rem 0rem;
+}
+
+.read-post-main-container .post-main-container .post-interactions-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.read-post-main-container .post-main-container .post-interactions-main .post-interactions {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.read-post-main-container .post-main-container .post-interactions-main .post-interactions .post-interaction-icons-span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    position: relative;
+}
+
+.hover-text {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: -2.1rem;
+    left: 40%;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.3rem;
+    width: 80px;
+    border-radius: 0.5rem;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.hover-text::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    /* Position the tail below the box */
+    left: 50%;
+    /* Center the tail horizontally */
+    transform: translateX(-50%);
+    width: 1rem;
+    /* Tail width */
+    height: 1rem;
+    /* Tail height */
+    background-color: black;
+    /* Same as the bubble box */
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    /* Create a triangle */
+}
+
+.hover-like,
+.hover-comment,
+.hover-listen,
+.hover-save,
+.hover-share,
+.hover-views{
+    display: none;
+}
+
+.post-interaction-icons-span.like:hover .hover-like,
+.post-interaction-icons-span.comment:hover .hover-comment,
+.post-interaction-icons-span.listen:hover .hover-listen,
+.post-interaction-icons-span.save:hover .hover-save,
+.post-interaction-icons-span.share:hover .hover-share,
+.post-interaction-icons-span.views:hover .hover-views {
+    display: block;
+}
+
+.read-post-main-container .post-main-container .post-interactions-main .post-interactions .post-interaction-icons-span .post-interaction-icons {
+    width: 1.5rem;
+    height: auto;
+}
+
+.read-post-main-container .post-main-container .post-interactions-main .post-interactions .post-interaction-icons-span .post-interaction-icons.post-liked{
+    color:#0056b3;
+}
+
+.post-interaction-icons-span:hover .post-interaction-icons {
+    transform: scale(1.1);
+}
+
+.read-post-main-container .post-main-container .post-title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align:justify center;
+}
+
+.read-post-main-container .post-main-container img.post-image {
+    width: 80%;
+    height: auto;
+    align-self: center;
+    margin: 2rem 0;
+}
+
+.post-description{
+    font-size: 1rem;
+    margin: 0.3rem 0rem;
+    font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+    gap: 0.7rem;
+    letter-spacing: -0.003em;
+    line-height: 32px;
+}
+
+.post-section-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin: 0.5rem 0;
+}
+
+.post-section-title{
+    font-weight: 650;
+}
+
+.read-post-main-container .post-main-container .post-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    letter-spacing: -0.003em;
+    line-height: 32px;
+}
+
+.read-post-main-container .post-main-container .post-content h2 {
+    font-size: 1.3rem;
+    margin: 0.3rem 0rem;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.read-post-main-container .post-main-container .post-content p {
+    font-size: 1rem;
+    margin: 0.3rem 0rem;
+    font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.post-tags-container{
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.post-tag{
+    font-size: 0.85rem;
+    border-radius: 0.5rem;
+    padding: 5px 10px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.post-tag:hover{
+    text-decoration: underline;
+    background-color: #fff !important;
+    color: #000000 !important;
+}
+
+.read-post-main-container .post-suggestion-main-container{
+    width: 55%;
+    margin: 0% auto;
+    margin-bottom: 5%;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+}
+
+.read-post-main-container .post-suggestion-main-container .post-suggestion-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.8rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.read-post-main-container .post-suggestion-main-container .post-suggestion-header .post-suggestion-header-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.read-post-main-container .post-suggestion-main-container .horizontal-ruler{
+    width: 100%;
+    height: 0.03rem;
+    background-color: #b1b1b1;
+    margin: 0.5rem 0rem;
+}
+
+.read-post-main-container .post-suggestion-main-container .post-suggestion-container {
+    display: grid;
+    justify-content: start;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 0.2rem;
+}
+
+/* Dark Mode Styling */
+body.dark-mode .read-post-main-container .comment-box-panel {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+body.dark-mode .read-post-main-container .comment-box-panel .comment-box-form-container .comment-box-input-group {
+    background-color: #ffffff;
+}
+
+body.dark-mode .hover-text {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark-mode .hover-text::after {
+    background-color: rgb(255, 255, 255);
+}
+
+/* Media Query For Responsivness */
+@media (max-width:1400px) {
+    .read-post-main-container .post-suggestion-main-container .post-suggestion-container{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width:1024px) {
+    /* Post Content Styling */
+    .read-post-main-container {
+        margin: 0;
+    }
+    .read-post-main-container .post-main-container, .read-post-main-container .post-suggestion-main-container {
+        width: 70%;
+    }
+    
+}
+@media (max-width:768px) {
+    .read-post-main-container {
+        margin: 0;
+    }
+
+    .read-post-main-container .post-main-container, .read-post-main-container .post-suggestion-main-container {
+        width: 90%;
+    }
+
+    .read-post-main-container .post-suggestion-main-container .post-suggestion-container{
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width:580px) {
+
+    .read-post-main-container .post-main-container .about-author-main-container .followers-count-and-post-timestamp {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.3rem;
+    }
+}
+
+@media (max-width:400px) {
+    .read-post-main-container .comment-box-panel {
+        width: 100%;
+    }
+}

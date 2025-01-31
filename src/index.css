@@ -1,0 +1,48 @@
+/* styles.css */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.dark-mode {
+  --background-color: #090D1F;
+  --text-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* General toast styles */
+body .custom-toast {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #e60051;
+  color: #ffffff;
+}
+
+/* Dark mode styles */
+body.dark-mode .custom-toast {
+  background-color: #e60051;
+  color: #ffffff;
+}

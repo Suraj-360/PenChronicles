@@ -1,0 +1,134 @@
+/* General skeleton styles */
+.post-article-card-container-skeleton {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    padding: 0.1rem 0.1rem 0.5rem 0.1rem;
+}
+
+.post-card-skeleton {
+    animation: shimmer 1.5s infinite;
+    background: linear-gradient(90deg, #f0f0f0 25%, #eaeaea 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+}
+
+@keyframes shimmer {
+    from {
+        background-position: -200% 0;
+    }
+
+    to {
+        background-position: 200% 0;
+    }
+}
+
+.post-card-skeleton-pin-icon-container{
+    display: flex;
+    justify-content: end;
+    margin-right: 0.5rem;
+}
+
+/* Skeleton-specific styles */
+.post-card-skeleton-thumbnail {
+    width: 100%;
+    height: 150px;
+    background: #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.post-card-skeleton-pin-icon {
+    width: 25px;
+    height: 25px;
+    background: #ccc;
+    border-radius: 50%;
+    top: 10px;
+    right: 10px;
+}
+
+.post-card-skeleton-author-and-timestamp,
+.post-card-skeleton-title,
+.post-card-skeleton-description,
+.post-card-skeleton-tags {
+    margin: 10px 0;
+}
+
+.post-card-skeleton-text {
+    height: 14px;
+    background: #ccc;
+    border-radius: 5px;
+}
+
+.post-card-skeleton-small {
+    width: 50%;
+    margin-bottom: 5px;
+}
+
+.post-card-skeleton-title {
+    height: 20px;
+    background: #ccc;
+    width: 70%;
+    border-radius: 5px;
+}
+
+.post-card-skeleton-description {
+    height: 14px;
+    background: #ccc;
+    width: 90%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.post-card-skeleton-tags {
+    display: flex;
+    gap: 5px;
+}
+
+.post-card-skeleton-tag {
+    width: 50px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 20px;
+}
+
+body.dark-mode .post-article-card-container-skeleton {
+    background-color: #202540;
+}
+
+body.dark-mode .post-card-skeleton {
+    background: linear-gradient(
+        90deg,
+        rgba(32, 37, 64, 0.2) 25%,
+        rgba(176, 176, 255, 0.1) 50%,
+        rgba(32, 37, 64, 0.2) 75%
+    );
+    background-size: 200% 100%;
+}
+
+body.dark-mode .post-card-skeleton-thumbnail  {
+    background-color: #20254070;
+}
+
+body.dark-mode .post-card-skeleton-tag {
+    background-color: #20254070;
+}
+
+body.dark-mode .post-card-skeleton-description {
+    background-color: #20254070;
+}
+
+body.dark-mode .post-card-skeleton-pin-icon{
+    background-color: #20254070;
+}
+
+body.dark-mode .post-card-skeleton-title{
+    background-color: #20254070;
+}
+
+body.dark-mode .post-card-skeleton-text {
+    background-color: #20254070;
+}

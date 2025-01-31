@@ -1,0 +1,69 @@
+/* NotFoundPage.css */
+.not-found-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Georgia', serif; /* Elegant, bookish font */
+}
+
+.not-found-content {
+    text-align: center;
+    padding: 30px;
+    background-color: #545454;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+.not-found-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #1a73e8; /* Elegant blue tone */
+    font-weight: bold;
+    font-family: 'Garamond', serif;
+}
+
+.not-found-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-family: 'Georgia', serif;
+}
+
+.button-group {
+    margin-top: 20px;
+}
+
+.back-home-link {
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    background-color: #1a73e8;  /* PenChronicles brand color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 15px;
+    transition: background-color 0.3s ease;
+    font-family: 'Georgia', serif;
+}
+
+.back-home-link:hover {
+    background-color: #155a8a;  /* Darker shade for hover */
+}
+
+.go-back-button {
+    padding: 12px 25px;
+    background-color: #f39c12;  /* Gold button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Georgia', serif;
+}
+
+.go-back-button:hover {
+    background-color: #e67e22;  /* Darker gold on hover */
+}

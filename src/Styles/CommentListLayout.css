@@ -1,0 +1,207 @@
+ .comment-list-layout-response-container {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     gap: 0.5rem;
+     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+     padding: 2px 2px 10px 2px;
+     border-bottom: 1px solid #6B6B6B;
+ }
+
+ .comment-list-layout-response-container .response-container-header {
+     width: 100%;
+     display: flex;
+     gap: 0.3rem;
+ }
+
+ .comment-list-layout-response-container .response-container-header .response-user-profile-pic {
+     width: 45px;
+     height: 45px;
+     border-radius: 50%;
+ }
+
+ .response-container-content-container {
+     display: flex;
+     flex-direction: column;
+     flex: 1;
+ }
+
+ .comment-list-layout-response-container .response-container-header .response-user-name {
+     font-size: 1rem;
+     font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+     line-height: 20px;
+     font-weight: 550;
+     cursor: pointer;
+ }
+
+ .comment-list-layout-response-container .response-container-header .response-user-name:hover {
+     text-decoration: underline;
+ }
+
+ .response-container-content-container .response-container-content {
+     font-size: 14px;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     line-height: 20px;
+     color: #808080;
+     font-weight: 300;
+ }
+
+ .comment-list-layout-response-container .response-container-header .response-user-follow-button {
+     color: green;
+ }
+
+ .comment-list-layout-response-container .response-container-header .response-user-timestamp {
+     color: #6B6B6B;
+     font-size: 0.8rem;
+ }
+
+ .response-container-likes-and-reply {
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     color: #6B6B6B;
+ }
+
+ .response-container-likes-and-reply .response-container-likes-and-reply-icons {
+     width: 15px;
+     height: 15px;
+ }
+
+ .replt-btn,
+ .view-replies-btn {
+     display: flex;
+     align-items: center;
+     gap: 0.2rem;
+ }
+
+ .response-interaction-icons {
+     width: 1.2rem;
+     height: auto;
+ }
+
+ .response-interaction-icons.post-liked {
+     color: #e60051;
+ }
+
+ .response-interaction-icons-span {
+     display: flex;
+     align-items: center;
+     gap: 0.2rem;
+ }
+
+ .replies-container {
+     flex: 1;
+     padding-left: 5px;
+     margin-left: 10px;
+     border-left: 2px solid #c1c1c1;
+     display: flex;
+     flex-direction: column;
+     gap: 0.5rem;
+ }
+
+ .reply-item {
+     width: 100%;
+     display: flex;
+     gap: 0.2rem;
+     padding: 2px;
+ }
+
+ .reply-user-profile-pic {
+     width: 35px;
+     height: 35px;
+     border-radius: 50%;
+     border: 1px solid black;
+ }
+
+ .reply-item-content {
+     display: flex;
+     flex-direction: column;
+     flex: 1;
+ }
+
+ .reply-user-name {
+     font-weight: bold;
+     font-size: 13px;
+     cursor: pointer;
+ }
+
+ .reply-user-name:hover{
+    text-decoration: underline;
+}
+
+ .reply-text {
+     width: 100%;
+     font-size: 13px;
+     word-break: break-word;
+     overflow-wrap: break-word;
+     white-space: normal;
+ }
+
+ .no-replies {
+     flex: 1;
+     font-size: 12px;
+     color: #97afff;
+     text-align: center;
+ }
+
+ .reply-input-container {
+     margin-top: 8px;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     position: relative;
+ }
+
+ .reply-input-box {
+     width: 100%;
+     padding: 8px;
+     border: none;
+     border-bottom: 2px solid #007bff;
+     background-color: transparent;
+     font-size: 14px;
+     outline: none;
+     transition: border-color 0.3s ease;
+ }
+
+ .reply-input-box:focus {
+     border-color: #e60051;
+ }
+
+ .reply-actions {
+     display: flex;
+     justify-content: flex-end;
+     gap: 8px;
+     margin-top: 5px;
+ }
+
+ .reply-cancel-btn,
+ .reply-submit-btn {
+     padding: 6px 12px;
+     border: none;
+     cursor: pointer;
+     border-radius: 4px;
+     font-size: 14px;
+     transition: background-color 0.2s ease;
+ }
+
+ .reply-cancel-btn {
+     background-color: #f5f5f5;
+     color: #555;
+ }
+
+ .reply-cancel-btn:hover {
+     background-color: #eaeaea;
+ }
+
+ .reply-submit-btn {
+     background-color: #007bff;
+     color: white;
+ }
+
+ .reply-submit-btn:hover {
+     background-color: #0056b3;
+ }
+
+ body.dark-mode .reply-input-box {
+     color: #ffffff;
+ }

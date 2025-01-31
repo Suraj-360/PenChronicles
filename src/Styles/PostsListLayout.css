@@ -1,0 +1,112 @@
+.post-editor-post-list-layout-main-container {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    transition: transform 0.3s ease-in-out;
+    padding: 0.1rem 0.1rem 0.5rem 0.1rem;
+}
+
+.post-editor-post-list-layout-main-container img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    /* Ensures consistent ratio */
+    object-fit: cover;
+}
+
+.post-editor-post-content-and-button-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.post-editor-post-content-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.post-editor-post-content-container .post-editor-post-content-title{
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.post-editor-post-content-timestamp{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 0.5rem;
+    padding-right: 0.5rem;
+    color: #6941C6;
+}
+
+.post-editor-post-content-description {
+    font-size: 0.95rem;
+    /* Scales with font base */
+    line-height: 1.5;
+    color: #667085;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-align: justify;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.post-editor-button-container {
+    width: 100%;
+    display: flex;
+    gap: 0.2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-editor-button {
+    width: 82px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    font-size: 0.9rem;
+    gap: 0.4rem;
+    border-radius: 10px;
+    color:#ffffff
+}
+
+.post-editor-one-button{
+    background-color: #0056b3;
+}
+
+.post-editor-two-button{
+    background-color: #e60051;
+}
+
+.post-editor-button-icon{
+    width: 13px;
+    height: auto;
+}
+
+.post-editor-button:hover {
+    transform: scale(1.02);
+}
+
+body.dark-mode .post-editor-post-list-layout-main-container {
+    box-shadow: rgba(149, 157, 165, 0.2) 5px 5px 10px;
+}

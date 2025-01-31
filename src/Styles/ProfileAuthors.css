@@ -1,0 +1,26 @@
+.profile-authors-not-available-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profile-authors-not-available-container img{
+    height: 150px;
+    width: auto;
+}
+
+.profile-authors-not-available-container span{
+    font-weight: 500;
+    font-size: 1.2rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.profile-authors-main-container{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}

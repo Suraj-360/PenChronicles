@@ -1,0 +1,223 @@
+.about-author-fragment-loader-main-container {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    display: flex;
+    gap: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.skeleton {
+    animation: shimmer 1.5s infinite;
+    background: linear-gradient(90deg, #f0f0f0 25%, #eaeaea 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+}
+
+.about-author-header-container-skeleton{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skeleton-about-text{
+    width: 80px;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 4px;
+}
+
+.about-author-content-container-skeleton{
+    width: 90%;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.draft-post-content-container-skeleton {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: none;
+}
+
+
+.skeleton-line {
+    height: 12px;
+    background-color: #ddd;
+    border-radius: 4px;
+}
+
+.long {
+    width: 100%;
+}
+
+.middle {
+    width: 70%;
+}
+
+.short{
+    width: 50%;
+}
+
+.very-short{
+    width: 30%;
+}
+
+.skeleton-button {
+    width: 100px;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 15px;
+}
+
+@keyframes shimmer {
+    from {
+        background-position: -200% 0;
+    }
+
+    to {
+        background-position: 200% 0;
+    }
+}
+
+body.dark-mode .about-author-fragment-loader-main-container {
+    background-color: #202540;
+}
+
+body.dark-mode .skeleton {
+    background: linear-gradient(
+        90deg,
+        rgba(32, 37, 64, 0.2) 25%,
+        rgba(176, 176, 255, 0.1) 50%,
+        rgba(32, 37, 64, 0.2) 75%
+    );
+    background-size: 200% 100%;
+}
+
+body.dark-mode .skeleton-line, body.dark-mode .skeleton-about-text{
+    background-color: #20254070;
+}
+
+body.dark-mode .skeleton-button {
+    background-color: #20254070;
+}
+
+.about-author-fragment-main-container {
+    width: 100%;
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-author-fragment-main-container .about-author-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.2rem;
+    margin: 0.5rem 0.1rem;
+}
+
+.about-author-fragment-main-container .about-author-buttons-container .about-author-text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.about-author-fragment-main-container .about-author-buttons-container .about-author-text .about-author-text-icon {
+    width: 17px;
+    height: 17px;
+}
+
+.about-author-fragment-main-container .about-author-buttons-container .about-author-button {
+    padding: 0.5rem 0.8rem;
+    gap: 0.5rem;
+    border: 1px solid #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.8rem;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    cursor: pointer;
+    background-color: #00000000;
+    color: #121212;
+}
+
+.about-author-fragment-main-container .about-author-buttons-container .about-author-button .about-author-button-icon{
+    width: 15px;
+    height: 15px;
+}
+
+.about-author-fragment-main-container .about-author-content-container .about-author-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    letter-spacing: -0.003em;
+    line-height: 32px;
+}
+
+.about-author-fragment-main-container .about-author-content-container .about-author-content br {
+    display: none;
+}
+
+.about-author-fragment-main-container .about-author-content-container .about-author-content img {
+    display: flex;
+    justify-self: center;
+    width: 60%;
+    height: auto;
+    align-content: center;
+}
+
+.about-author-fragment-main-container .about-author-content-container .about-author-content h1 {
+    font-size: 1.2rem;
+    margin: 0.3rem 0rem;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.about-author-fragment-main-container .about-author-content-container .about-author-content h2 {
+    font-size: 1.15rem;
+    margin: 0.3rem 0rem;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.about-author-fragment-main-container .about-author-content-container .about-author-content h3 {
+    font-size: 1.1rem;
+    margin: 0.3rem 0rem;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.about-author-fragment-main-container .about-author-content-container .about-author-content p {
+    font-size: 1rem;
+    margin: 0.3rem 0rem;
+    font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.about-author-fragment-main-container .about-author-content-container .about-author-content a{
+    color: #1675fb;
+}
+
+
+body.dark-mode .about-author-fragment-main-container .about-author-content-container .about-author-content u{
+    color:#b39e9e;
+}
+
+body.dark-mode .about-author-fragment-main-container .about-author-buttons-container .about-author-button {
+    border-color: #ffffff;
+    color: #ffffff;
+    background-color: #202540 !important;
+}

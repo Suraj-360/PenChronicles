@@ -1,0 +1,491 @@
+/* Loading Overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* Ensure it appears above all other content */
+}
+
+/* Loader Container */
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Spinner Animation */
+.spinner {
+    margin-top: 10px;
+    border: 8px solid #f3f3f3;
+    /* Light gray background */
+    border-top: 8px solid #3498db;
+    /* Blue color for the spinner */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+/* Spinner animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.blog-editor-container {
+    width: 100%;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.blog-editor-container h1 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.blog-editor-container .error-message-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 1rem auto;
+}
+
+.blog-editor-container .error-message-container .error-message {
+    color: rgb(255, 59, 59);
+    font-weight: 500;
+}
+
+.blog-editor-container .horizontal-ruler {
+    width: 100%;
+    height: 0.0675rem;
+    background-color: #b1b1b1;
+    margin: 0.7rem 0rem;
+}
+
+/* Editor Action Buttons Container Styling Start*/
+.blog-editor-container .editor-actions {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem auto;
+}
+
+.blog-editor-container .editor-actions .editor-actions-buttons {
+    width: 140px;
+    padding: 0.7rem 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.blog-editor-container .editor-actions .editor-actions-buttons:hover {
+    transform: scale(1.05);
+}
+
+.blog-editor-container .editor-actions .editor-actions-buttons.save-draft-button {
+    background-color: #95959550;
+    color: #959595;
+}
+
+.blog-editor-container .editor-actions .editor-actions-buttons.preview-button {
+    background-color: #ff800050;
+    color: #ff8000;
+}
+
+.blog-editor-container .editor-actions .editor-actions-buttons.publish-button {
+    background-color: #b9008150;
+    color: #b90081;
+}
+
+.blog-editor-container .editor-actions .editor-actions-buttons.save-button {
+    background-color: #007bff50;
+    color: #007bff;
+}
+
+.blog-editor-container .editor-actions .editor-actions-buttons-icons {
+    width: 20px;
+    height: auto;
+}
+
+.blog-editor-container .editor-actions .rotating-icon {
+    animation: rotate-icon 1s linear infinite;
+}
+
+.blog-editor-container .editor-actions .confirmed-icon {
+    color: #ffffff;
+}
+
+@keyframes rotate-icon {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Editor Action Buttons Container Styling End */
+
+
+/* Form group styling */
+.blog-editor-container .form-group,
+.blog-editor-container .section-container .form-group {
+    margin-bottom: 20px;
+}
+
+.blog-editor-container .form-group label,
+.blog-editor-container .section-container .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.blog-editor-container .form-group .required {
+    color: rgb(255, 59, 59);
+}
+
+.blog-editor-container .form-group input[type="text"],
+.blog-editor-container .form-group input[type="file"],
+.blog-editor-container .section-container .form-group input[type="text"],
+.blog-editor-container .section-container .form-group input[type="file"] {
+    width: 100%;
+    padding: 0.5rem 0;
+    border: none;
+    border-bottom: 2px solid #B1B1B1;
+    outline: none;
+    font-size: 16px;
+    color: black;
+    background-color: transparent;
+    transition: border-color 0.3s ease;
+}
+
+.blog-editor-container .section-container .form-group select {
+    width: 100%;
+    display: block;
+    overflow-y: auto;
+    padding: 0.5rem 0;
+    border: none;
+    border-bottom: 2px solid #B1B1B1;
+    outline: none;
+    font-size: 16px;
+    color: black;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+
+.dropdown-container {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.dropdown-selected {
+    font-size: 16px;
+}
+
+.dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 70px;
+    /* Scroll limit */
+    overflow-y: auto;
+    /* Enable scrolling */
+    border: 1px solid #ccc;
+    background-color: white;
+    color: #121212;
+    z-index: 1000;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-option {
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-option:hover {
+    background-color: #b90081;
+}
+
+.blog-editor-container .form-group input[type="text"]:focus,
+.blog-editor-container .form-group input[type="file"]:focus,
+.blog-editor-container .section-container .form-group input[type="text"]:focus,
+.blog-editor-container .section-container .form-group input[type="file"]:focus {
+    outline: none;
+    border-bottom: 2px solid #666666;
+}
+
+.blog-editor-container .form-group.add-section {
+    width: 100%;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    border: 2px dotted black;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.blog-editor-container .form-group.add-section:hover {
+    transform: scale(1.001);
+}
+
+.blog-editor-container .section-container {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.blog-editor-container .section-container .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem auto;
+}
+
+.blog-editor-container .section-container .section-header .section-delete-button-container {
+    position: relative;
+}
+
+.blog-editor-container .section-container .section-header .section-delete-button-container:hover .section-delete-button-text {
+    display: block;
+}
+
+.blog-editor-container .section-container .section-header .section-delete-button-container .section-delete-button-text {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 45%;
+    left: -280%;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 0.5rem 0.4rem;
+    width: 120px;
+    border-radius: 0.5rem;
+    background-color: #121212;
+    color: #ffffff;
+    display: none;
+}
+
+.blog-editor-container .section-container .section-header .section-delete-button-container .section-delete-button-text::after {
+    content: '';
+    position: absolute;
+    top: 25%;
+    bottom: 50%;
+    right: -10px;
+    width: 1rem;
+    height: 1rem;
+    background-color: black;
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+}
+
+.blog-editor-container .section-container .section-header .section-delete-button-container .delete-section-btn {
+    width: 25px;
+    height: auto;
+    cursor: pointer;
+    color: red;
+}
+
+.blog-editor-container .section-container .section-header .section-delete-button-container .delete-section-btn:hover {
+    transform: scale(1.03);
+}
+
+/* React Quill editor styling */
+.blog-editor-container .section-container .ql-container {
+    min-height: 200px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.blog-editor-container .section-container .ql-editor.ql-blank::before {
+    color: #555;
+    font-style: italic;
+}
+
+.blog-editor-container .section-container .ql-toolbar {
+    border-radius: 4px 4px 0 0;
+    border: 1px solid #ddd;
+}
+
+/* Preview modal styling */
+.preview-model-main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.preview-model-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.preview-model-header-text {
+    padding: 0.5rem 0.8rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.preview-model-header .preview-model-header-button {
+    padding: 0.5rem 0.8rem;
+    gap: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.8rem;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    cursor: pointer;
+    background-color: #006aff;
+    color: #ffffff;
+}
+
+.preview-model-header .preview-model-header-button-icon{
+    width: 15px;
+    height: 15px;
+}
+
+.preview-model-main-container .preview-model-post-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: justify center;
+}
+
+.preview-model-main-container img.preview-model-post-image {
+    width: 60%;
+    height: auto;
+    align-self: center;
+    margin: 2rem 0;
+}
+
+.preview-model-main-container .preview-model-post-description {
+    font-size: 1rem;
+    margin: 0.3rem 0rem;
+    font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+    gap: 0.7rem;
+    letter-spacing: -0.003em;
+    line-height: 32px;
+}
+
+.preview-model-post-section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin: 0.5rem 0;
+}
+
+.preview-model-post-section-title {
+    font-weight: 650;
+}
+
+.preview-model-main-container .preview-model-post-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    letter-spacing: -0.003em;
+    line-height: 32px;
+}
+
+.preview-model-main-container .preview-model-post-content h2 {
+    font-size: 1.3rem;
+    margin: 0.3rem 0rem;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.preview-model-main-container .preview-model-post-content p {
+    font-size: 1rem;
+    margin: 0.3rem 0rem;
+    font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+/* Dark Mode Styling */
+body.dark-mode .blog-editor-container .form-group input[type="text"],
+body.dark-mode .blog-editor-container .form-group input[type="file"],
+body.dark-mode .blog-editor-container .section-container .form-group input[type="text"],
+body.dark-mode .blog-editor-container .section-container .form-group input[type="file"] {
+    color: #ffffff;
+}
+
+body.dark-mode .blog-editor-container .form-group.add-section {
+    border-color: #ffffff;
+}
+
+body.dark-mode .blog-editor-container .section-container .ql-editor {
+    color: #ffffff;
+}
+
+body.dark-mode .blog-editor-container .section-container .ql-editor.ql-blank::before {
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+}
+
+body.dark-mode .blog-editor-container .section-container .section-header .section-delete-button-container .section-delete-button-text {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+body.dark-mode .blog-editor-container .section-container .section-header .section-delete-button-container .section-delete-button-text::after {
+    background-color: #ffffff;
+}
+
+@media (max-width:900px) {
+    .blog-editor-container .editor-actions {
+        width: 100%;
+        flex-direction: column-reverse;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .blog-editor-container .editor-actions .editor-actions-buttons {
+        width: 250px;
+        padding: 0.7rem 0.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.7rem;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border-radius: 0.5rem;
+        cursor: pointer;
+    }
+}

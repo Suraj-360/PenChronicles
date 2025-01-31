@@ -1,0 +1,410 @@
+.profile-loader-main-container {
+    max-width: 1400px;
+    height: 100vh;
+    margin: 0.5% auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1%;
+}
+
+.profile-loader-main-container .profile-loader {
+    width: 65px;
+    aspect-ratio: 1;
+    position: relative;
+}
+
+.profile-loader-main-container .profile-loader:before,
+.profile-loader-main-container .profile-loader:after {
+    content: "";
+    position: absolute;
+    border-radius: 50px;
+    box-shadow: 0 0 0 3px inset #000000;
+    animation: loaderAnimation 2.5s infinite;
+}
+
+.profile-loader-main-container .profile-loader:after {
+    animation-delay: -1.25s;
+}
+
+@keyframes loaderAnimation {
+    0% {
+        inset: 0 35px 35px 0;
+    }
+
+    12.5% {
+        inset: 0 35px 0 0;
+    }
+
+    25% {
+        inset: 35px 35px 0 0;
+    }
+
+    37.5% {
+        inset: 35px 0 0 0;
+    }
+
+    50% {
+        inset: 35px 0 0 35px;
+    }
+
+    62.5% {
+        inset: 0 0 0 35px;
+    }
+
+    75% {
+        inset: 0 0 35px 35px;
+    }
+
+    87.5% {
+        inset: 0 0 35px 0;
+    }
+
+    100% {
+        inset: 0 35px 35px 0;
+    }
+}
+
+.profile-main-container-wrapper {
+    max-width: 1400px;
+    margin: 0.5% auto 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1%;
+}
+
+.profile-main-container-wrapper .profile-main-container {
+    width: 100%;
+    display: flex;
+    gap: 0.1rem;
+    height: 82.5vh;
+    margin: 2rem auto 0rem auto;
+}
+
+.profile-main-container-wrapper .profile-main-container .user-profile-content {
+    flex: 3;
+    height: 100%;
+    border-right: 1px solid #b1b1b1;
+}
+
+.profile-main-container-wrapper .profile-main-container .user-profile-content .user-profile-navigator {
+    display: flex;
+    border-bottom: 1px solid #b1b1b1;
+    box-shadow: rgba(255, 255, 255, 0.15) 0px 48px 100px 0px;
+}
+
+.profile-main-container-wrapper .profile-main-container .user-profile-content .user-profile-navigator span {
+    padding: 0.5rem 0.4rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.profile-main-container-wrapper .profile-main-container .user-profile-content .user-profile-navigator span.active {
+    background-color: #c9c9c9;
+}
+
+.profile-main-container-wrapper .horizontal-ruler {
+    width: 100%;
+    height: 0.03rem;
+    background-color: #b1b1b1;
+    margin: 2rem 0rem;
+}
+
+.user-profile-navigator-content {
+    height: 93.6%;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #e60051 #202540;
+    margin-top: 0.5rem;
+    padding-right: 0.1rem;
+}
+
+.user-profile-navigator-content::-webkit-scrollbar {
+    width: 3px;
+}
+
+.user-profile-navigator-content::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #e60051, #888);
+    border-radius: 2px;
+    border: 2px solid #f4f4f4;
+}
+
+.user-profile-navigator-content::-webkit-scrollbar-track {
+    background: #f4f4f4;
+    border-radius: 2px;
+    margin: 4px 0;
+}
+
+.profile-main-container-wrapper .profile-main-container .user-profile-head {
+    flex: 1;
+}
+
+.profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-content .user-profile-head-top .user-profile-background-profile-image-container,
+.profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-form .user-profile-background-profile-image-container {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    padding: 0.2rem;
+    width: 100%;
+    height: 120px;
+    background-color: #c9c9c9;
+    border-bottom: 1px solid #b1b1b1;
+    margin-bottom: 2.5rem;
+}
+
+.profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-content .user-profile-head-top .user-profile-background-profile-image-container .edit-profile-button,
+.profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-form .user-profile-background-profile-image-container .edit-profile-button {
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-content .user-profile-head-top .user-profile-background-profile-image-container .edit-profile-button .edit-profile-button-text,
+.profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-form .user-profile-background-profile-image-container .edit-profile-button-text {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 45%;
+    left: -190%;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 0.5rem 0.4rem;
+    width: 120px;
+    border-radius: 0.5rem;
+    background-color: #121212;
+    color: #ffffff;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-content .user-profile-head-top .user-profile-background-profile-image-container .edit-profile-button:hover .edit-profile-button-text,
+.profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-form .user-profile-background-profile-image-container .edit-profile-button:hover .edit-profile-button-text {
+    display: flex;
+}
+
+.profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-content .user-profile-head-top .user-profile-background-profile-image-container .edit-profile-button .edit-profile-button-text::after,
+.profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-form .user-profile-background-profile-image-container .edit-profile-button .edit-profile-button-text:after {
+    content: '';
+    position: absolute;
+    top: 25%;
+    bottom: 50%;
+    right: -10px;
+    width: 1rem;
+    height: 1rem;
+    background-color: black;
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+}
+
+.profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-content .user-profile-head-top .user-profile-background-profile-image-container .edit-profile-button:hover,
+.profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-form .user-profile-background-profile-image-container .edit-profile-button:hover {
+    transform: scale(1.02);
+}
+
+.profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-content .user-profile-head-top .user-profile-background-profile-image-container .edit-profile-button .svg-icon-edit-profile,
+.profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-form .user-profile-background-profile-image-container .edit-profile-button .svg-icon-edit-profile {
+    width: 65%;
+    height: auto;
+    color: #e60051;
+}
+
+.profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-content .user-profile-head-top,
+.profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-form .edit-profile-form-head-top {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-content .user-profile-head-top .user-profile-background-profile-image-container .user-profile-pic,
+.profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-form .user-profile-background-profile-image-container .user-profile-pic {
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 95%;
+    left: 3.2rem;
+    border-radius: 3rem;
+    border: 1px solid #ddd;
+    /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-content .user-profile-head-top .user-profile-background-profile-image-container .user-profile-pic img,
+.profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-form .user-profile-background-profile-image-container .user-profile-pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.profile-main-container-wrapper .profile-main-container .user-profile-head .profile-pic-name {
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 20px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-left: 0.2rem;
+}
+
+.profile-main-container-wrapper .profile-main-container .user-profile-head .profile-pic-follower-count,
+.profile-main-container-wrapper .profile-main-container .user-profile-head .profile-pic-bio {
+    color: #6B6B6B;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 20px;
+    word-break: break-word;
+    margin: 0rem 0.2rem;
+    text-align: justify;
+}
+
+.profile-main-container-wrapper .profile-main-container .user-profile-head .profile-pic-bio {
+    margin-bottom:0.5rem;
+}
+
+.user-author-profile-follow-following-button{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 500;
+    transition: all 3s fade-out;
+}
+
+.user-author-profile-follow-following-button.user-author-profile-follow-button{
+    background-color: #e60051;
+}
+
+.user-author-profile-follow-following-button.user-author-profile-following-button{
+    background-color: #7182FF;
+}
+
+.user-author-profile-follow-following-button:hover{
+    transform: scale(1.005);
+}
+
+.profile-main-container-wrapper .profile-main-container .user-profile-head .profile-pic-follower-count {
+    color: rgb(71, 82, 245);
+}
+
+.profile-main-container-wrapper .profile-main-container .user-profile-head .profile-pic-follower-count:hover {
+    text-decoration: underline;
+}
+
+.profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-form .edit-profile-form-head-top .edit-profile-edit-bio {
+    width: 100%;
+    max-width: 300px;
+    height: 80px;
+    resize: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-form .edit-profile-form-head-top .bio-char-count {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 5px;
+    display: block;
+    text-align: right;
+}
+
+.profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-form .edit-profile-form-head-top .edit-profile-form-image-container input[type="file"] {
+    margin-top: 10px;
+}
+
+.profile-main-container-wrapper .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.profile-main-container-wrapper .modal-overlay .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-main-container-wrapper .modal-overlay .modal-content .modal-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profile-main-container-wrapper .modal-overlay .modal-content .modal-buttons button:first-child {
+    background: red;
+    color: white;
+}
+
+.profile-main-container-wrapper .modal-overlay .modal-content .modal-buttons button:last-child {
+    background: green;
+    color: white;
+}
+
+body.dark-mode .profile-loader-main-container .profile-loader:before,
+body.dark-mode .profile-loader-main-container .profile-loader:after {
+    box-shadow: 0 0 0 3px inset #ffffff;
+}
+
+body.dark-mode .profile-main-container-wrapper .profile-main-container .user-profile-content .user-profile-navigator {
+    background-color: #202540;
+}
+
+body.dark-mode .profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-content .user-profile-head-top .user-profile-background-profile-image-container,
+body.dark-mode .profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-form .user-profile-background-profile-image-container {
+    background-color: #202540;
+}
+
+body.dark-mode .profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-content .user-profile-head-top .user-profile-background-profile-image-container .edit-profile-button .edit-profile-button-text,
+body.dark-mode .profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-form .user-profile-background-profile-image-container .edit-profile-button-text {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+body.dark-mode .profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-content .user-profile-head-top .user-profile-background-profile-image-container .edit-profile-button .edit-profile-button-text::after,
+body.dark-mode .profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-form .user-profile-background-profile-image-container .edit-profile-button .edit-profile-button-text:after {
+    background-color: #ffffff;
+}
+
+body.dark-mode .profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-content .user-profile-edit-button-container .edit-profile-button:hover,
+body.dark-mode .profile-main-container-wrapper .profile-main-container .user-profile-head .user-profile-head-form .user-profile-edit-button-container .edit-profile-button:hover {
+    background-color: #434a6d;
+}
+
+@media (max-width:768px) {
+    .profile-main-container-wrapper .profile-main-container {
+        flex-direction: column-reverse;
+        justify-content: start;
+    }
+
+    .profile-main-container-wrapper .profile-main-container .user-profile-content {
+        flex: unset;
+        height: unset;
+    }
+
+    .profile-main-container-wrapper .profile-main-container .user-profile-head {
+        flex: unset;
+    }
+}
