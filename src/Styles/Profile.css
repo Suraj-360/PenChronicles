@@ -79,7 +79,6 @@
     width: 100%;
     display: flex;
     gap: 0.1rem;
-    height: 82.5vh;
     margin: 2rem auto 0rem auto;
 }
 
@@ -115,9 +114,9 @@
 
 .user-profile-navigator-content {
     height: 93.6%;
-    overflow-y: scroll;
+    /* overflow-y: scroll;
     scrollbar-width: thin;
-    scrollbar-color: #e60051 #202540;
+    scrollbar-color: #e60051 #202540; */
     margin-top: 0.5rem;
     padding-right: 0.1rem;
 }
@@ -397,8 +396,9 @@ body.dark-mode .profile-main-container-wrapper .profile-main-container .user-pro
     .profile-main-container-wrapper .profile-main-container {
         flex-direction: column-reverse;
         justify-content: start;
+        gap: 1rem;
     }
-
+    
     .profile-main-container-wrapper .profile-main-container .user-profile-content {
         flex: unset;
         height: unset;
