@@ -7,15 +7,25 @@
     padding: 1%;
 }
 
-.read-post-main-container .comment-box-panel {
-    position: absolute;
-    display: none;
+.comment-box-panel-wrapper {
+    position: fixed;
     top: 0;
-    right: 0;
-    width: 370px;
-    height: 100%;
-    background-color: #f0f0f0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: end;
     z-index: 999;
+    display: flex;
+    justify-content: end;
+}
+
+.read-post-main-container .comment-box-panel {
+    display: none;
+    width: 370px;
+    height: 100vh;
+    background-color: #f0f0f0;
     overflow-y: auto;
     padding: 1rem 1.5rem;
     display: flex;
@@ -24,7 +34,6 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     transition: right 0.5s ease-in-out;
 }
-
 
 .read-post-main-container .comment-box-panel .horizontal-ruler {
     width: 100%;

@@ -368,6 +368,13 @@
 }
 
 @media (max-width:768px) {
+
+    .home-container-wrapper .the-blog-heading {
+        min-height: unset;
+        height: unset;
+        row-gap: 1rem;
+    }
+
     .trending-blogs-home-loading-main-container{
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
