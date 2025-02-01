@@ -21,7 +21,7 @@ function Signup() {
     });
 
     const signupimg = "https://res.cloudinary.com/dtq2cn21c/image/upload/v1738294692/PenChronicles%20assets/signup_glisvx.png"
-    const laptopimg = "https://res.cloudinary.com/dtq2cn21c/image/upload/v1738294756/PenChronicles%20assets/laptop_xfqryp.png"
+    const booksimg = "https://res.cloudinary.com/dtq2cn21c/image/upload/v1738294815/PenChronicles%20assets/books_ocjpt4.png"
     const googleimg = "https://res.cloudinary.com/dtq2cn21c/image/upload/v1738294735/PenChronicles%20assets/google_lopok0.png"
     const facebookimg = "https://res.cloudinary.com/dtq2cn21c/image/upload/v1738294720/PenChronicles%20assets/facebook_jfxmei.png"
 
@@ -100,7 +100,7 @@ function Signup() {
             {(isDarkMode) ? <button className='toggle-theme-sign-up-page' onClick={toggleDarkMode}>Light Mode <MdOutlineDarkMode className='svg-icon-toggle-sign-up-page' /></button> : <button className='toggle-theme-sign-up-page' onClick={toggleDarkMode}>Dark Mode <MdDarkMode className='svg-icon-toggle-sign-in-page dark-mode-gold' /></button>}
             <div className='signup-left-container'>
                 <img src={signupimg} className='signup-girl-image'></img>
-                <img src={laptopimg} className='signup-laptop-image'></img>
+                <img src={booksimg} className='signup-laptop-image'></img>
             </div>
             <div className='signup-right-container'>
                 <h1>PenChronicles</h1>
