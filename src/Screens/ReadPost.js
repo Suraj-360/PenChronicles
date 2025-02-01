@@ -16,6 +16,7 @@ import { MdRecommend } from "react-icons/md";
 import { IoEye } from "react-icons/io5";
 import { IoBookmark } from "react-icons/io5";
 import { BsBookmarkHeart } from "react-icons/bs";
+import SharePopUp from '../Components/SharePopUp.js';
 
 function ReadPost() {
     const [post, setPost] = useState({
@@ -47,12 +48,24 @@ function ReadPost() {
     const [panelVisibility, setPanelVisibility] = useState(false);
     const [yourThought, setYourThought] = useState("");
     const [followings, setFollowings] = useState([]);
+    const [showSharePopUp, setShareShowPopUp] = useState(false); // State to toggle the pop-up visibility
     const [reRender, setReRender] = useState(false);
     const navigate = useNavigate();
     const { postId } = useParams();
 
     const handleCommentBoxPanel = () => {
-        setPanelVisibility((prev) => !prev);
+        setPanelVisibility((prev) => {
+            const newState = !prev;
+            if (newState) {
+                // Disable scroll
+                document.body.style.overflow = "hidden";
+            } else {
+                // Enable scroll
+                document.body.style.overflow = "auto";
+            }
+
+            return newState;
+        });
     };
 
     useEffect(() => {
@@ -325,6 +338,16 @@ function ReadPost() {
         }
     }
 
+    const handleShareClick = () => {
+        setShareShowPopUp(true);
+        document.body.style.overflow = "hidden";
+    };
+
+    const handleClosePopUp = () => {
+        setShareShowPopUp(false);
+        document.body.style.overflow = "auto";
+    };
+
     const handleNavigateProfileView = () => {
         navigate(`/${post.postBy._id}/profile`);
     }
@@ -344,7 +367,7 @@ function ReadPost() {
             window.speechSynthesis.cancel(); // Stop any ongoing speech
         };
     }, []);
-    
+
     const speakContent = (item) => {
         if (!item) return;
 
@@ -523,42 +546,79 @@ function ReadPost() {
         navigate(`/tag/${encodeURIComponent(tag)}/related-posts`);
     };
 
+    // Close drawer when clicking outside
+    const handleClickOutside = (e) => {
+        if (panelVisibility && !e.target.closest(".comment-box-panel") && !e.target.closest(".post-interaction-comment-icon")) {
+            setPanelVisibility(false);
+            document.body.style.overflow = "auto";
+        }
+    };
+
+    // Close drawer on Escape key press
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === "Escape") {
+                setPanelVisibility(false);
+                document.body.style.overflow = "auto";
+            }
+        };
+
+        window.addEventListener("keydown", handleKeyDown);
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, []);
+
+    // Attach event listener to detect clicks outside the drawer
+    useEffect(() => {
+        if (panelVisibility) {
+            document.addEventListener("click", handleClickOutside);
+        } else {
+            document.removeEventListener("click", handleClickOutside);
+        }
+        return () => {
+            document.removeEventListener("click", handleClickOutside);
+        };
+    }, [panelVisibility]);
+
     return (
         <div className='read-post-main-container'>
             <Nav
                 isBell={true}
             />
             {panelVisibility &&
-                <div className='comment-box-panel'>
-                    <div className='comment-box-panel-header'>
-                        <h2>Responses ({post.comments.length})</h2>
-                        <RxCross2 className='close-comment-box-panel' onClick={handleCommentBoxPanel} />
-                    </div>
-                    <form className='comment-box-form-container'>
-                        <div className="comment-box-input-group">
-                            <input
-                                type="text"
-                                placeholder="What are your thought?"
-                                className="form-input-comment-box"
-                                value={yourThought}
-                                onChange={(e) => setYourThought(e.target.value)}
-                            />
-                            <span className='comment-box-respond-button' onClick={handleCommentPost}>Respond</span>
+                <div className='comment-box-panel-wrapper'>
+                    <div className='comment-box-panel'>
+                        <div className='comment-box-panel-header'>
+                            <h2>Responses ({post.comments.length})</h2>
+                            <RxCross2 className='close-comment-box-panel' onClick={handleCommentBoxPanel} />
                         </div>
-                    </form>
-                    <span className='horizontal-ruler'></span>
-                    <div className='responses-main-container'>
-                        {
-                            post.comments.map((item, index) => {
-                                return (
-                                    <CommentListLayout
-                                        comment={item}
-                                        handleCommentReply={handleCommentReply}
-                                        handleLikeReply={handleCommentLike}
-                                    />
-                                )
-                            })
-                        }
+                        <form className='comment-box-form-container'>
+                            <div className="comment-box-input-group">
+                                <input
+                                    type="text"
+                                    placeholder="What are your thought?"
+                                    className="form-input-comment-box"
+                                    value={yourThought}
+                                    onChange={(e) => setYourThought(e.target.value)}
+                                />
+                                <span className='comment-box-respond-button' onClick={handleCommentPost}>Respond</span>
+                            </div>
+                        </form>
+                        <span className='horizontal-ruler'></span>
+                        <div className='responses-main-container'>
+                            {
+                                post.comments.map((item, index) => {
+                                    return (
+                                        <CommentListLayout
+                                            comment={item}
+                                            handleCommentReply={handleCommentReply}
+                                            handleLikeReply={handleCommentLike}
+                                        />
+                                    )
+                                })
+                            }
+                        </div>
                     </div>
                 </div>
             }
@@ -608,7 +668,7 @@ function ReadPost() {
                             <span className='hover-like hover-text'>Like</span>
                         </span>
                         <span className='post-interaction-icons-span comment' onClick={handleCommentBoxPanel}>
-                            <FaComment className='post-interaction-icons' />
+                            <FaComment className='post-interaction-icons post-interaction-comment-icon' />
                             {formatNumber(post.comments.length)}
                             <span className='hover-comment hover-text'>Comment</span>
                         </span>
@@ -650,7 +710,7 @@ function ReadPost() {
                             )
                         }
                         <span className='post-interaction-icons-span share'>
-                            <FaShare className='post-interaction-icons' />
+                            <FaShare className='post-interaction-icons' onClick={handleShareClick}></FaShare>
                             <span className='hover-share hover-text'>Share</span>
                         </span>
                     </div>
@@ -695,6 +755,7 @@ function ReadPost() {
                     </>
                 }
             </div>
+            {showSharePopUp && <SharePopUp show={showSharePopUp} onClose={handleClosePopUp} />}
         </div>
     );
 }

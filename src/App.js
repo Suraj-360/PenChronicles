@@ -19,6 +19,7 @@ import NotFoundPage from './Screens/NotFoundPage.js';
 import AboutUs from './Screens/AboutUs.js';
 import Category from './Screens/Category.js';
 import {TagRelatedPosts, CategoryRelatedPosts, PopularPosts} from './Screens/RelatedPostsPages.js';
+import VerifyEmail from './Screens/VerifyEmail.js';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             <Route exact path='/popular-posts' element={<PopularPosts />} />
             <Route exact path="/readpost/:postId/" element={<ReadPost />} />
             <Route exact path="/:userID/profile" element={<Profile />}/>
+            <Route exact path="/verify-email" element={<VerifyEmail />} />
             <Route exact path="/user-notifications" element={<Notification />}/>
             <Route exact path="/tag/:tag/related-posts" element={<TagRelatedPosts />}/>
             <Route exact path="/category/:category/related-posts" element={<CategoryRelatedPosts />}/>
