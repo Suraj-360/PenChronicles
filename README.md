@@ -1,74 +1,135 @@
-<<<<<<< HEAD
-# PenChronicles
-=======
-# Getting Started with Create React App
+# ![PenChronicles](https://res.cloudinary.com/dtq2cn21c/image/upload/v1738519494/My%20Assets/image-removebg-preview_4_dmb9kv.png)
+  PenChronicles is a blogging platform where content creators can write and publish articles. Similar to Medium, PenChronicles allows readers to discover, comment, like, and engage with articles.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## ✨ Features
 
-## Available Scripts
+- 📝 **Create & Publish Articles** - Users can write, publish, and manage their articles.
+- 🔍 **Search & Filter** - Smart search system to find articles by title, tags, and author.
+- 👤 **User Authentication** - Signup/Login with JWT-based authentication.
+- 💬 **Comments & Reactions** - Users can comment and like posts.
+- 📊 **Analytics Dashboard** - Track views, likes, and engagement for each post.
+- 📱 **Responsive UI** - Mobile-friendly and smooth user experience with Tailwind CSS.
+- 🌙 **Dark Mode** - Switch between light and dark themes.
+- 🎙️ **Text-to-Speech** - Listen to articles with content highlighted as it is read.
+- 🔄 **User Feed** - Personalized feed based on followers, likes, and comments.
+- 🖼️ **Profile Customization** - Users can update their bio and profile picture.
 
-In the project directory, you can run:
+## 🚀 Tech Stack
 
-### `npm start`
+- **Frontend:** React, CSS
+- **Backend:** Node.js, Express.js, MongoDB
+- **Text-to-Speech:** Integrated with React Quill
+  
+### Frontend Repository
+- **Tech Stack:** React, CSS
+- **Repo:** [Frontend Repository](https://github.com/your-username/PenChronicles-Frontend)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Backend Repository
+- **Tech Stack:** Node.js, Express.js, MongoDB
+- **Repo:** [Backend Repository](https://github.com/your-username/PenChronicles-Backend)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🔧 Installation & Setup
 
-### `npm test`
+### Frontend Setup
+1. **Clone the frontend repository:**
+   ```bash
+   git clone https://github.com/Suraj-360/PenChronicles.git
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Setup environment variables (.env file) for frontend:**
+   ```env
+   REACT_APP_FRONTEND_URL =  Your frontend URL or [http://localhost:3000]
+   REACT_APP_BACKEND_URL = Your backend URL or [http://localhost:5000]
+   ```
+4. **Run the frontend:**
+   ```bash
+   npm start
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Backend Setup
+1. **Clone the backend repository:**
+   ```bash
+   git clone https://github.com/your-username/PenChronicles-Backend.git
+   ```
+2. **Install dependencies:**
+   ```bash
+   cd PenChronicles-Backend
+   npm install
+   ```
+3. **Setup environment variables (.env file):**
+   ```env
+   DB_URL_ALTAS = Enter Your Mongo Altas URL (https://account.mongodb.com/)
+   CLOUD_NAME = Enter Your Cloud Name (https://console.cloudinary.com/settings/)
+   CLOUD_API_KEY = 15 digit Cloudnary API Key (https://console.cloudinary.com/settings/)
+   CLOUD_API_SECRET= Write your Cloudnary API Secret (https://console.cloudinary.com/settings/)
+   PORT = Mention port like 5000
+   JWT_SECRET = Enter your JWT Secret (Anything like WseEwwDsEfes34sEW)
+   EMAIL_USER = Enter email
+   EMAIL_PASS = Enter email password
+   FRONTEND_URL = Your frontend URL or [http://localhost:3000]
+   ```
+4. **Run the backend:**
+   ```bash
+   npm start
+   ```
 
-### `npm run build`
+## 📌 API Endpoints
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Method | Endpoint                         | Description                         |
+|--------|----------------------------------|-------------------------------------|
+| POST   | /api/auth/signup                 | User signup                         |
+| POST   | /api/auth/signin                 | User login                          |
+| GET    | /api/verify-email/:token         | Verify user email                   |
+| POST   | /api/create-post                 | Create a new post                   |
+| POST   | /api/save-post-draft             | Save post as draft                  |
+| POST   | /api/get-draft-post              | Get draft posts                     |
+| POST   | /api/get-published-post          | Get published posts                 |
+| POST   | /api/get-recent-post             | Get recent edited posts             |
+| POST   | /api/get-trash-post              | Get temporarily deleted posts       |
+| POST   | /api/get-profile-posts           | Get user profile posts              |
+| POST   | /api/get-profile-saved-posts     | Get user saved posts                |
+| POST   | /api/personalized-feed-post      | Get personalized feed posts         |
+| POST   | /api/public-feed-post            | Get public feed posts               |
+| GET    | /api/get-trending-posts          | Get trending posts                  |
+| GET    | /api/get-recent-posts            | Get recent posts                    |
+| PUT    | /api/temp-delete-post            | Temporarily delete a post           |
+| PUT    | /api/restore-delete-post         | Restore a deleted post              |
+| DELETE | /api/permanent-delete-post       | Permanently delete a post           |
+| POST   | /api/toggle-save-post            | Save/Unsave a post                  |
+| POST   | /api/user-saved-post-status      | Check if a post is saved            |
+| POST   | /api/get-post-by-id              | Get a post by ID                    |
+| POST   | /api/get-posts-by-category       | Get posts by category               |
+| POST   | /api/like-post                   | Like a post                         |
+| POST   | /api/comment-post                | Comment on a post                   |
+| POST   | /api/like-comment                | Like a comment                      |
+| POST   | /api/reply-on-comment            | Reply to a comment                  |
+| POST   | /api/view-post                   | View a post                         |
+| POST   | /api/search                      | Search posts & users                |
+| POST   | /api/search-tag-posts            | Search posts by tags                |
+| POST   | /api/get-notification            | Fetch notifications                 |
+| POST   | /api/mark-notification-as-read   | Mark notification as read           |
+| POST   | /api/delete-notification-message | Delete notification                 |
+|--------|----------------------------------|-------------------------------------|
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📷 Screenshots
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Homepage](https://res.cloudinary.com/dtq2cn21c/image/upload/v1738519931/My%20Assets/home_page_gn9z0u.png)
 
-### `npm run eject`
+![Article Page](https://res.cloudinary.com/dtq2cn21c/image/upload/v1738520299/My%20Assets/Read_me_page_eivhqd.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🤝 Contributing
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Contributions are welcome! Follow these steps:
+1. **Fork the repository**
+2. **Create a new branch:** `git checkout -b feature-name`
+3. **Commit your changes:** `git commit -m "Added new feature"`
+4. **Push to the branch:** `git push origin feature-name`
+5. **Open a Pull Request**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📜 License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This project is licensed under the **MIT License**, created by **SURAJ PANDEY**. You are free to use, copy, modify, or distribute the project for both personal and commercial purposes. For more details, check the [LICENSE](./LICENSE) file.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> 52cb0b0 (Initial commit)
