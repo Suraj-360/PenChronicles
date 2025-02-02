@@ -116,7 +116,7 @@
 
 ## 📷 Screenshots
 
-![Homepage](https://res.cloudinary.com/dtq2cn21c/image/upload/v1738519931/My%20Assets/home_page_gn9z0u.png)
+![Homepage](https://res.cloudinary.com/dtq2cn21c/image/upload/v1738521680/My%20Assets/home_page_pxlmxn.png)
 
 ![Article Page](https://res.cloudinary.com/dtq2cn21c/image/upload/v1738520299/My%20Assets/Read_me_page_eivhqd.png)
 
