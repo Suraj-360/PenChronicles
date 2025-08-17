@@ -41,8 +41,8 @@
    ```
 3. **Setup environment variables (.env file) for frontend:**
    ```env
-   REACT_APP_FRONTEND_URL =  Your frontend URL or [http://localhost:3000]
-   REACT_APP_BACKEND_URL = Your backend URL or [http://localhost:5000]
+   REACT_APP_FRONTEND_URL =  <Your frontend URL> or [http://localhost:3000]
+   REACT_APP_BACKEND_URL = <Your backend URL> or [http://localhost:5000]
    ```
 4. **Run the frontend:**
    ```bash
@@ -61,15 +61,15 @@
    ```
 3. **Setup environment variables (.env file):**
    ```env
-   DB_URL_ALTAS = Enter Your Mongo Altas URL (https://account.mongodb.com/)
-   CLOUD_NAME = Enter Your Cloud Name (https://console.cloudinary.com/settings/)
-   CLOUD_API_KEY = 15 digit Cloudnary API Key (https://console.cloudinary.com/settings/)
-   CLOUD_API_SECRET= Write your Cloudnary API Secret (https://console.cloudinary.com/settings/)
-   PORT = Mention port like 5000
-   JWT_SECRET = Enter your JWT Secret (Anything like WseEwwDsEfes34sEW)
-   EMAIL_USER = Enter email
-   EMAIL_PASS = Enter email password
-   FRONTEND_URL = Your frontend URL or [http://localhost:3000]
+   DB_URL_ALTAS = <Enter Your Mongo Altas URL> (https://account.mongodb.com/)
+   CLOUD_NAME = <Enter Your Cloud Name> (https://console.cloudinary.com/settings/)
+   CLOUD_API_KEY = <15 digit Cloudnary API Key> (https://console.cloudinary.com/settings/)
+   CLOUD_API_SECRET= <Write your Cloudnary API Secret> (https://console.cloudinary.com/settings/)
+   PORT = <Mention port like 5000>
+   JWT_SECRET = <Enter your JWT Secret>
+   EMAIL_USER = <Enter Email>
+   EMAIL_PASS = <Enter Email's Password>
+   FRONTEND_URL = <Your frontend URL> or [http://localhost:3000]
    ```
 4. **Run the backend:**
    ```bash
